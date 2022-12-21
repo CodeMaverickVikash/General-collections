@@ -123,17 +123,6 @@ stash - branch no matter, do this when you don't want to commit your code but yo
 it save in your system. before it need to staged.
 apply latest stash - come all changes after done stash.
 
-ak - india
-b - us
-ab - aus
-
-D:\ABOS\wildfly-9.0.1.Final\standalone_adoddle\tmp\vfs\deployment\deploymentbd793266932d629c\adoddle-web.war-e7a2d3784c11012c
-
-form URL on Local server : '/adoddle/contexthelper/en_GB/createFormBeta.htm'
-
-Bitbucket app password - s9MFNb6SXr8G2mFNRt35
-
-
 ERROR:
 hint: Please, commit your changes before merging.
 Solution: 'git commit -m "Case_Ticket_No"'
