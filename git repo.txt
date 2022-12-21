@@ -1,0 +1,150 @@
+Git working
+first is working directory --- second is staging area --- git directory/repository
+
+Configuration for git bash only once
+git config --global user.name your_name
+git config --global user.email your_email
+git config --global user.password your_password
+
+checking
+git config --global user.name
+git config --global user.email
+############################################################
+
+git init // This Command initialize folder as empty git repo
+STAGGING - git add . // This Command add all files present in current directory
+
+git restore --staged <file_name> // to unstage
+
+COMMIT - git commit -m "initial commit" // This command will commit/save all changes
+check status command is git status // everything okay
+
+git remote add origin link_here_of_your_repo_SSH_wala // You have to add remote origin means yesi website or server which will save our code 
+git push origin master or git push origin master --force // It will push/upload your code on website
+
+
+git pull origin master // For pulling code
+git log // If you want to see kisne kya changes kiya your repo me use this cmd
+
+git branch // To see what branch you are using
+
+git show ssh_key // Review your changes
+
+git diff file_name // Review your changes
+git diff --staged file_name // To see staged file changes
+
+
+ Branches (Create, Merge, Delete a branch) 
+
+1) git branch // to show branches
+2) git branch BRANCH_NAME // it will create new branch
+3) git checkout BRANCH_NAME // to active ealier created branch
+
+Merce two branches
+first you need to go main branch, then run commant "git merge BRANCH_NAME" 
+
+git checkout -b BRANCH_NAME // create branch and checkout above both command in single line
+
+Go to main branch, then run command "git branch -d BRANCH_NAME" // in order to delete dummy branch
+
+
+push new branch to github
+First need to checkout what branch you want to push, then run command "git push --set-upstream origin BRANCH_NAME"
+
+
+
+explore command - git reset <commit_hash> && git stash && git stash pop 
+
+
+Working on existing project --------->
+Que. Why Fork and How to fork?
+If you don't have permission to change anything in existing project and you want to contribute something, then you need to fork it, 
+Fork means copy of the project in your own account so that you can change and contribute.
+
+git remote -v // To show attach origin
+
+// What is upstream and adding it to local
+git remote add upstream "URL_FORM _YOU FORKED"
+
+origin - your own account
+upstream - not your own account
+
+// To remove commit
+git log
+git reset "Copy_bellow_commit_hash_to_remove_upper_commit"
+git status
+?? show up: unstaged
+git add .
+git stash
+git log 
+?? everything will be good
+
+Merge conflicts and how to resolve them?
+
+
+
+
+
+Git Tutorial 5: Undoing/Reverting/Resetting code changes
+
+1) Undo uncommited changes -------------> "git checkout -- ."
+2) Undo commited changes -------------->  "git revert <commit_id>" or "git revert -n <commit_id>" for no commit
+3) Resetting changes ------------>   "git reset --hard <select commit id on which state do you want to go>" // previous state
+
+// git log --------> show only history of your code how it was envolved
+
+git log flow
+
+   latest commit (upper)
+	|
+	|
+	|
+	|
+   old commit (lower)
+
+
+Head is a reference to the most recent commit in current branch (in most of the cases) ------> HEAD and latest commit both are same or we can say HEAD is the short form of most recent commit
+git show HEAD
+git show <latest commit>
+
+Detached Head senario - when HEAD doesn't point to most recent commit, you go into detached HEAD state.
+
+
+GIT CHERRY-PICK
+1) Bring changes from specific commit
+2) Choose one or more commits
+git cherry-pick <commit id>  ---------------> it will make commit automatically
+git cherry-pick <commit id> -n  ---------------> it will stage but not make commit // it will not work with merged commit
+
+
+in vscode
+# stash technique used during switching branch
+stash - branch no matter, do this when you don't want to commit your code but you want to keep that,
+it save in your system. before it need to staged.
+apply latest stash - come all changes after done stash.
+
+ak - india
+b - us
+ab - aus
+
+D:\ABOS\wildfly-9.0.1.Final\standalone_adoddle\tmp\vfs\deployment\deploymentbd793266932d629c\adoddle-web.war-e7a2d3784c11012c
+
+form URL on Local server : '/adoddle/contexthelper/en_GB/createFormBeta.htm'
+
+Bitbucket app password - s9MFNb6SXr8G2mFNRt35
+
+
+ERROR:
+hint: Please, commit your changes before merging.
+Solution: 'git commit -m "Case_Ticket_No"'
+EX: 'git commit -m "BLDBTRPFST-539"'
+
+"git fetch": refresh the repository
+
+how to know which function is bind to element??
+
+// Lookup events for this particular Element
+$._data( $('css_selector')[0], "events" );
+
+Error: There is no tracking information for the current branch.
+Solved: git branch --set-upstream-to=origin/master master
