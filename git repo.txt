@@ -137,3 +137,6 @@ $._data( $('css_selector')[0], "events" );
 
 Error: There is no tracking information for the current branch.
 Solved: git branch --set-upstream-to=origin/master master
+
+
+git merge --abort // solve the merging problem
