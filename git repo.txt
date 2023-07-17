@@ -1,6 +1,8 @@
 Git working
 first is working directory --- second is staging area --- git directory/repository
 
+git remote -v // to check which origin is added
+
 Configuration for git bash only once
 git config --global user.name your_name
 git config --global user.email your_email
