@@ -24,6 +24,9 @@ check status command is git status // everything okay
 git remote add origin link_here_of_your_repo_SSH_wala // You have to add remote origin means yesi website or server which will save our code 
 git push origin master or git push origin master --force // It will push/upload your code on website
 
+// To update remote
+git remote set-url origin new_url
+
 
 git pull origin master // For pulling code
 git log // If you want to see kisne kya changes kiya your repo me use this cmd
