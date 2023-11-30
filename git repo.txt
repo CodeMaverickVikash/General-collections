@@ -145,3 +145,7 @@ Solved: git branch --set-upstream-to=origin/master master
 
 
 git merge --abort // solve the merging problem
+
+Unwanted changes are not gone after discarding changes with git, to resolve this issue, need to run the below command:
+git rm --cached -r .
+git reset --hard
