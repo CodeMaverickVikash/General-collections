@@ -1,2 +1,2 @@
 # github
-Here will be github related info
+All content and information relate to git and github will be here.
