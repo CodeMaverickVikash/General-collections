@@ -1,0 +1,14 @@
+sudo dpkg -i fileNameWith.deb // to install app of .deb file
+sudo systemctl status/start/stop/restart server_name // to check status of service ex. mongod
+
+apt list --installed // list all installed pkg using apt
+apt list --installed pkg_name -a // check specific pkg installed or not, -a for all
+sudo apt remove pkg_name // remove pkg
+sudo apt purge pkg_name // completely uninstall pkg
+
+dpkg --get-selections // list all installed pkg using dpkg
+dpkg --get-selections | grep python // filters by python keyword
+dpkg -L python // get location of all installed python pkg
+
+pwd // check current dir
+nautilus . // open file manager from terminal in current dir
