@@ -1,0 +1,22 @@
+File - Locale code - Language name (Country)
+
+language.properties - en - English
+language_en.properties - en - English
+language_en_AU.properties - en_AU - English (Australia)
+language_en_CA.properties - en_CA - English (Canada)
+language_en_US.properties - en_US - English (United States)
+language_en_ZA.properties - en_ZA - English (South Africa)
+
+language_ar_SA.properties.native - ar_SA - Arabic (Saudi Arabia)
+language_cs_CZ.properties.native - cs_CZ - Czech (Czech Republic)
+language_de_DE.properties.native - de_DE - German (Germany)
+language_es_ES.properties.native - es_ES - Spanish (Spain)
+language_fr_FR.properties.native - fr_FR - French (France)
+language_ga_IE.properties.native - ga_IE - Irish (Ireland)
+language_it_IT.properties.native - it_IT - Italian (Italy)
+language_ja_JP.properties.native - ja_JP - Japanese (Japan)
+language_nl_NL.properties.native - nl_NL - Dutch (Netherlands)
+language_ru_RU.properties.native - ru_RU - Russian (Russia) 
+language_tr_TR.properties.native - tr_TR - Turkish (Turkey)
+language_zh_CN.properties.native - zh_CN - Chinese (simplified) (China)
+language_vi_VN.properties.native - vi_VN - Vietnamese (Vietnam)
