@@ -20,3 +20,6 @@ language_ru_RU.properties.native - ru_RU - Russian (Russia)
 language_tr_TR.properties.native - tr_TR - Turkish (Turkey)
 language_zh_CN.properties.native - zh_CN - Chinese (simplified) (China)
 language_vi_VN.properties.native - vi_VN - Vietnamese (Vietnam)
+
+comment out - means to comment a line or block of lines
+uncomment - is the opposite of comment out
