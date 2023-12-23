@@ -1,2 +1,2 @@
-# github
-All content and information relate to git and github will be here.
+# General-collections
+This project is going to be a collector of general things.
