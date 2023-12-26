@@ -2,8 +2,9 @@
 	// Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and 
 	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
 	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
-	// same ids are connected.
-	// Example:
+	// same IDs are connected.
+
+	//helpful general logging
 	"Print to console": {
 		"prefix": "clg",
 		"body": [
@@ -11,24 +12,19 @@
 		],
 		"description": "Log output to console"
 	},
-	"import user snipets": {
-		"prefix": "import",
-		"body": [
-			"import $1 from '$2';$0"
-		],
-		"description": "Log output to console"
-	},
-	"es6 function": {
-		"prefix": "func",
+	//helpful for react dev
+	"arrow function": {
+		"prefix": "function",
 		"body": [
 			"const $1 = ($2) => {",
 			"	$3 ",
 			"}$0"
 		],
-		"description": "create es6 function template"
+		"description": "Create arrow function"
 	},
-	"es6 function with default export": {
-		"prefix": "func",
+	//helpful for react dev
+	"function with default export": {
+		"prefix": "function",
 		"body": [
 			"const $1 = ($2) => {",
 			"	$3 ",
@@ -36,15 +32,6 @@
 			"",
 			"export default $0;"
 		],
-		"description": "create es6 function template with export"
-	},
-	"callback user snippets": {
-		"prefix": "callback",
-		"body": [
-			"($1) => {",
-			"	$0 ",
-			"}"
-		],
-		"description": "create a callback function"
+		"description": "Create a function with default export"
 	},
 }
