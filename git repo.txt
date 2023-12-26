@@ -128,6 +128,8 @@ stash - branch no matter, do this when you don't want to commit your code but yo
 it save in your system. before it need to staged.
 apply latest stash - come all changes after done stash.
 
+git pull origin BRANCH_NAME // take pull from remote repo
+
 ERROR:
 hint: Please, commit your changes before merging.
 Solution: 'git commit -m "Case_Ticket_No"'
