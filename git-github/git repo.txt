@@ -93,10 +93,11 @@ Merge conflicts and how to resolve them?
 Git Tutorial 5: Undoing/Reverting/Resetting code changes
 
 1) Undo uncommited changes -------------> "git checkout -- ."
-2) Undo commited changes -------------->  "git revert <commit_id>" or "git revert -n <commit_id>" for no commit
+2) Undo commited changes -------------->  "git revert <commit_id>" or "git revert -n <commit_id>" for no commit - it will take into unix editor, to exit just write ":q" and enter
 3) Resetting changes ------------>   "git reset --hard <select commit id on which state do you want to go>" // previous state
 
 // git log --------> show only history of your code how it was envolved
+// git log --oneline --graph --decorate ----> show history of commit in graph form
 
 git log flow
 
