@@ -2,4 +2,7 @@ Work log tips:
 Troubleshoot issue.
 Debug the issues
 gathered/understand the requirement
-Analysis and disucssion
+Analysis and discussion
+
+Chrome devTools
+"focus sources panel when triggering a breakpoint" - enable/disable as per your need
