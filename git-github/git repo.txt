@@ -152,3 +152,5 @@ git merge --abort // solve the merging problem
 Unwanted changes are not gone after discarding changes with git, to resolve this issue, need to run the below command:
 git rm --cached -r .
 git reset --hard
+
+Don't do undo last commit because it create some extra commit in bitbucket which is not good.
