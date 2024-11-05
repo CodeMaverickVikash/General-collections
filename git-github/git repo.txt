@@ -154,3 +154,10 @@ git rm --cached -r .
 git reset --hard
 
 Don't do undo last commit because it create some extra commit in bitbucket which is not good.
+
+
+Applying the changes from branch A to B, without merging or adding commits (Similar to pull request merge):
+git merge --no-commit --squash branchA
+git reset HEAD # to unstage the changes
+
+Note: for merge: sync both branch remotely, checkout banch B and do above things
