@@ -6,3 +6,5 @@ Analysis and discussion
 
 Chrome devTools
 "focus sources panel when triggering a breakpoint" - enable/disable as per your need
+
+Laptop night brightness should be 30-40%
