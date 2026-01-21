@@ -161,3 +161,17 @@ git merge --no-commit --squash branchA
 git reset HEAD # to unstage the changes
 
 Note: for merge: sync both branch remotely, checkout banch B and do above things
+
+How to Check WHICH REPO You Are In (Most Important) and where code fetch and push?
+git remote -v
+origin  git@github.com:account1/my-repo.git (fetch)
+origin  git@github.com:account1/my-repo.git (push)
+
+✅ This means:
+Push will go to account1
+Repo = my-repo
+📌 GitHub account is decided by remote URL, NOT by user.name.
+
+How to Check Commit Author for THIS Repo?
+git config user.name
+git config user.email
