@@ -178,3 +178,5 @@ git config user.email
 
 // Github copilot is best to use in complex project to understand code and get helps his to build next functionality
 // copilot is AI agent, we always should use it while writing code.
+👉 Opens Copilot Chat panel - Ctrl + Shift + I
+to open inline chat and edit code, first select the code then ctrl + I will open inline chat to edit code
