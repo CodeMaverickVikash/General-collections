@@ -175,3 +175,6 @@ Repo = my-repo
 How to Check Commit Author for THIS Repo?
 git config user.name
 git config user.email
+
+// Github copilot is best to use in complex project to understand code and get helps his to build next functionality
+// copilot is AI agent, we always should use it while writing code.
