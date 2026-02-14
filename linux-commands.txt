@@ -43,3 +43,10 @@ Best editors:
 
 Full ubuntu or linux os update
 sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo snap refresh
+
+to increase fonts in ubuntu, don't scele to 125% instead increase fonts using below terminal command
+gsettings set org.gnome.desktop.interface text-scaling-factor 1.3
+Values try karo:
+1.2 → thoda bada
+1.3 → comfortable
+1.5 → kaafi bada
