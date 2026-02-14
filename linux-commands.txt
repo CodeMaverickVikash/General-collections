@@ -40,3 +40,6 @@ Best editors:
 1. gedit
 2. nano
 3. vim
+
+Full ubuntu or linux os update
+sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo snap refresh
