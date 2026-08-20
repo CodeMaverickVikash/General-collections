@@ -48,7 +48,7 @@ git diff --staged file_name // To see staged file changes
 Merce two branches
 first you need to go main branch, then run commant "git merge BRANCH_NAME" 
 
-git checkout -b BRANCH_NAME // create branch and checkout above both command in single line
+git checkout -b BRANCH_NAME // create branch and checkout above both command in single line, it will create branch from where you are currently
 
 Go to main branch, then run command "git branch -d BRANCH_NAME" // in order to delete dummy branch
 
@@ -86,8 +86,10 @@ git log
 
 Merge conflicts and how to resolve them?
 
-
-
+Fix the last pushed commit author and email
+git commit --amend --author="Your Name <your@email.com>"
+git push --force
+⚠️ Force push is safe only if you’re the sole contributor on that branch.
 
 
 Git Tutorial 5: Undoing/Reverting/Resetting code changes
@@ -175,3 +177,94 @@ Repo = my-repo
 How to Check Commit Author for THIS Repo?
 git config user.name
 git config user.email
+
+
+
+how to manage multiple github accounts from one PC? want clone repo from different github account so need to login accordingly.
+1. create .ssh folder in root and go inside using "mkdir ~/.ssh && cd ~/.ssh"
+2. Generate key for each account using "ssh-keygen -t ed25519 -C "personal-email@example.com""
+3. create .bash_profile file in root (~) and add below code
+# Auto-start ssh-agent
+env=~/.ssh/agent.env
+
+agent_load_env () { test -f "$env" && . "$env" >| /dev/null ; }
+
+agent_start () {
+    (umask 077; ssh-agent >| "$env")
+    . "$env" >| /dev/null ; }
+
+agent_load_env
+
+agent_run_state=$(ssh-add -l >| /dev/null 2>&1; echo $?)
+
+if [ ! "$SSH_AUTH_SOCK" ] || [ $agent_run_state = 2 ]; then
+    agent_start
+    ssh-add ~/.ssh/your_first_personal_account_file_name
+    ssh-add ~/.ssh/your_second_work_account_file_name
+elif [ "$SSH_AUTH_SOCK" ] && [ $agent_run_state = 1 ]; then
+    ssh-add ~/.ssh/your_first_personal_account_file_name
+    ssh-add ~/.ssh/your_second_work_account_file_name
+fi
+
+unset env
+
+and run below command
+# Reload the profile
+source ~/.bash_profile
+
+verify ssh-add -l
+
+Add Public Keys to GitHub / GitLab
+copy from cat ~/.ssh/file_name_personal.pub
+
+Paste into:
+GitHub → Settings → SSH & GPG keys → New SSH key
+
+Repeat same step for others
+
+Next (IMPORTANT): Configure SSH for Multiple Accounts
+Create config file:
+
+nano ~/.ssh/config
+
+# Personal GitHub
+Host github-personal
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519_personal
+
+# Work GitHub
+Host github-work
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519_work
+
+
+Set permission:
+chmod 600 ~/.ssh/config
+
+✅ Test Connections
+ssh -T git@github-personal
+ssh -T git@github-work
+
+Uses:
+git clone git@github-work:work-username/repo.git
+git clone git@github-personal:personal-username/repo.git
+
+ssh-add -l
+
+done success
+git clone git@github-work:TruenoTech-in/Track-Shipment.git
+
+// Test personal
+ssh -T git@github-purpose92
+ssh -T git@github-vmaskhare
+ssh -T git@github-gagan
+
+
+npm i -g @railway/cli -> run all command in project root dir
+railway whoami - who logged in
+railway login
+railway init -> select workspace and create project
+railway link -> select workspace and link existing project
+railway up -> to deploy
