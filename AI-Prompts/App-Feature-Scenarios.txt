@@ -1,0 +1,51 @@
+You are a senior QA engineer. Generate detailed test scenarios for the
+"[FEATURE NAME]" feature of [APPLICATION NAME], a [ONE-LINE APP DESCRIPTION].
+
+Context: [Briefly describe what this feature does, its sub-capabilities,
+and any known technical/behavioral constraints — e.g. "structural vs
+visual", "client-side only", "license-gated", etc. Include anything a
+tester must know before writing steps.]
+
+For EACH distinct capability/sub-feature under "[FEATURE NAME]", produce
+one scenario block using EXACTLY this format:
+
+Feature: [Feature Name]
+
+Scenario: [Short, specific scenario title]
+Scenario ID: [PREFIX-###] (short uppercase prefix tied to the feature,
+  e.g. WM-001, DRM-001 — increment per scenario, reuse prefix per feature)
+Priority: [P0 | P1 | P2 | P3] (P0 = core/security-critical/blocking,
+  P1 = important, P2 = secondary, P3 = nice-to-have/rarely used)
+Type: [Functional | Security | Negative | Edge Case | Performance |
+  Accessibility | Integration | UX]
+Steps:
+  [Numbered list of concrete, executable UI actions a tester performs —
+  no internal code/implementation references, just what a tester clicks,
+  types, and observes.]
+Expected Result: [Precise, verifiable pass/fail criteria — what should
+  visibly happen. Call out anything a tester might mistakenly treat as a
+  bug versus intended behavior. Where relevant, state the exact failure
+  condition that would make this a defect.]
+Negative Scenario: [Optional — only include if there's a meaningful
+  "wrong input / blocked action / abuse attempt" case worth a separate
+  check within the same scenario, rather than a full separate scenario.]
+
+Rules:
+- Every scenario must be independently executable by a tester with no
+  special knowledge of the codebase.
+- Prefer one scenario per distinct user-facing capability rather than
+  cramming multiple unrelated checks into one scenario.
+- Flag anything that is advisory-only, client-side-only, or not a true
+  security boundary explicitly in the Expected Result, so QA doesn't
+  misreport it as a vulnerability.
+- If a capability's UI entry point cannot be confirmed to exist, write a
+  scenario that explicitly first verifies the entry point is reachable,
+  before testing its behavior.
+- Order scenarios from core/happy-path first to edge cases/negative
+  cases last.
+- Do not fabricate performance numbers, SLAs, or specific timing
+  thresholds unless given one.
+
+Now generate scenarios for: [FEATURE NAME]
+Known sub-capabilities to cover: [list them, or say "infer from context
+and typical behavior of this kind of feature"]
