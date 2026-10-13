@@ -1,0 +1,6 @@
+Skills for any agent like claude code, antigravity etc
+
+Stitch skill - to deal with stitch mcp server - https://github.com/google-labs-code/stitch-skills
+Taste skill - provide better prompt to ai, jisme ui ai generate na lage - https://github.com/leonxlnx/taste-skill
+Emilkowalski skill - for animation/motion - https://github.com/emilkowalski/skills
+Mobile app ui design skill - mobile ux/ui design - https://github.com/ceorkm/mobile-app-ui-design
