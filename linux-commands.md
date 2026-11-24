@@ -1,52 +1,112 @@
--> dpkg in Linux is the primary package manager for Debian and Debian-based systems, such as Ubuntu. The tool installs, builds, removes, configures, and retrieves information for Debian packages. The command works with packages in .deb format.
+# Linux Commands & Package Management
 
-dpkg [options] action
+## 1. DPKG (Debian Package Manager)
+`dpkg` installs, builds, removes, and manages local `.deb` packages on Debian and Ubuntu systems.
 
-sudo dpkg -i fileNameWith.deb // to install app of .deb file
-dpkg --get-selections // list all installed pkg using dpkg
-dpkg --get-selections | grep python // filters by python keyword
-dpkg -L python // get location of all installed python pkg
-dpkg -r <package> // Removes an installed package. Does not remove configuration files and other data.
-sudo dpkg -P <package> // Purges an installed or removed package. Deletes configuration files and other data.
+```bash
+# Install a .deb package
+sudo dpkg -i <filename.deb>
 
--> apt is an interactive command-line tool for managing deb packages on different Linux distributions. The package manager installs, removes, updates, and upgrades deb packages.
+# List all installed packages
+dpkg --get-selections
 
-Refer - https://phoenixnap.com/kb/apt-linux
+# Filter installed packages by keyword
+dpkg --get-selections | grep <keyword>
 
-apt [options] command [packages]
+# Get file locations installed by a package
+dpkg -L <package_name>
 
-apt list --installed // list all installed pkg using apt
-apt list --installed pkg_name -a // check specific pkg installed or not, -a for all
-sudo apt remove pkg_name // Deletes a package but leaves configuration files.
-sudo apt purge pkg_name // Deletes a package and any configuration files.
-sudo apt autoremove // Removes no longer required dependencies.
-sudo apt search // Searches for packages whose name or description contains the search term.
-sudo apt show // Prints details about a specific package.
+# Remove package (keeps configuration files)
+dpkg -r <package_name>
 
--> snap store
-snap find query
-snap list
-snap install appname
-snap remove appname
-snap info appname
-snap refresh
+# Purge package (removes package and all configuration files)
+sudo dpkg -P <package_name>
+```
 
--> Extra
-pwd // check current dir
-nautilus . // open file manager from terminal in current dir
-sudo systemctl status/start/stop/restart server_name // to check status of service ex. mongod
+---
 
-Best editors:
-1. gedit
-2. nano
-3. vim
+## 2. APT (Advanced Package Tool)
+`apt` is the interactive high-level package management tool for Debian/Ubuntu distributions.
 
-Full ubuntu or linux os update
+> Reference: [PhoenixNAP APT Guide](https://phoenixnap.com/kb/apt-linux)
+
+```bash
+# List all installed packages
+apt list --installed
+
+# Check if a specific package is installed (-a for all versions)
+apt list --installed <pkg_name> -a
+
+# Search for packages by keyword or description
+sudo apt search <search_term>
+
+# View details about a package
+sudo apt show <pkg_name>
+
+# Remove package (leaves configuration files)
+sudo apt remove <pkg_name>
+
+# Purge package (deletes package and configuration files)
+sudo apt purge <pkg_name>
+
+# Remove orphaned dependencies
+sudo apt autoremove
+```
+
+---
+
+## 3. Snap Package Management
+```bash
+snap find <query>       # Search Snap store
+snap list               # List installed snaps
+snap install <appname>  # Install application
+snap remove <appname>   # Remove application
+snap info <appname>     # View details about an app
+snap refresh            # Update all installed snaps
+```
+
+---
+
+## 4. Full Ubuntu / Linux System Update
+One-liner command to fully update apt packages, kernel/distro upgrades, clean orphans, and update snaps:
+```bash
 sudo apt update && sudo apt upgrade -y && sudo apt full-upgrade -y && sudo apt autoremove -y && sudo snap refresh
+```
 
-to increase fonts in ubuntu, don't scele to 125% instead increase fonts using below terminal command
+---
+
+## 5. Handy Utilities & System Commands
+```bash
+# Print current directory
+pwd
+
+# Open file manager (Nautilus) in current folder
+nautilus .
+
+# Manage system services (e.g., mongod, nginx)
+sudo systemctl status <service_name>
+sudo systemctl start <service_name>
+sudo systemctl stop <service_name>
+sudo systemctl restart <service_name>
+```
+
+---
+
+## 6. Recommended Linux Text Editors
+1. **gedit** (GUI editor)
+2. **nano** (Simple terminal editor)
+3. **vim** (Powerful terminal editor)
+
+---
+
+## 7. Ubuntu Font & Display Scaling Tip
+Instead of using fractional scaling (which can blur some apps), scale the system font cleanly via GNOME settings:
+```bash
 gsettings set org.gnome.desktop.interface text-scaling-factor 1.3
-Values try karo:
-1.2 → thoda bada
-1.3 → comfortable
-1.5 → kaafi bada
+```
+
+| Factor | Result |
+| :--- | :--- |
+| `1.2` | Slightly larger |
+| `1.3` | Balanced & comfortable |
+| `1.5` | Noticeably large |

@@ -1,13 +1,18 @@
+# GitHub PR Senior Review Prompt
+
 Review the current GitHub PR as a senior software engineer.
 
-First:
-1. Read CLAUDE.md if it exists.
-2. Read relevant files in .claude/ if they exist.
-3. Understand the project's architecture, coding standards, business logic, and testing approach.
+## Initial Steps
+1. Read `CLAUDE.md` if it exists.
+2. Read relevant files in `.claude/` if they exist.
+3. Understand the project architecture, coding standards, business logic, and testing approach.
 4. Identify the PR branch and compare it against its target/base branch.
 5. Review the complete git diff, not just individual files.
 
-Review the PR for:
+---
+
+## Review Checklist
+Review the PR thoroughly for:
 
 - Functional bugs
 - Business logic errors
@@ -30,31 +35,38 @@ Review the PR for:
 - Dependency risks
 - Maintainability problems
 
-Do not limit the review to changed lines. Inspect surrounding code and call sites when needed to determine whether the implementation is correct.
+> [!NOTE]
+> Do not limit the review to changed lines. Inspect surrounding code and call sites when needed to determine whether the implementation is correct.
+> Only report actionable findings.
 
-Only report actionable findings.
+---
 
-Do NOT report:
+## What NOT to Report
 - Formatting issues
-- Linter/prettier issues
+- Linter / Prettier issues
 - Purely subjective style preferences
 - Minor refactoring suggestions without meaningful benefit
 - Hypothetical issues without a realistic failure scenario
 - Unrelated problems that already existed before this PR
 
+---
+
+## Finding Report Format
 For every finding, provide:
 
-Severity: CRITICAL / HIGH / MEDIUM / LOW
-File: <path>
-Line: <line>
-Issue: <clear explanation>
-Impact: <why this can cause a real problem>
-Recommendation: <specific fix>
+- **Severity:** `CRITICAL` / `HIGH` / `MEDIUM` / `LOW`
+- **File:** `<path>`
+- **Line:** `<line>`
+- **Issue:** `<clear explanation>`
+- **Impact:** `<why this can cause a real problem>`
+- **Recommendation:** `<specific fix>`
 
-Pay special attention to:
+---
+
+## Special Attention Areas
 - Authorization bypass / IDOR
 - Missing validation
-- Null/undefined handling
+- Null / undefined handling
 - Incorrect database queries
 - N+1 queries
 - Duplicate operations
@@ -64,38 +76,41 @@ Pay special attention to:
 - Injection vulnerabilities
 - Broken error handling
 - Race conditions
-- Retry/idempotency problems
-- Date/time/timezone issues
+- Retry / idempotency problems
+- Date / time / timezone issues
 - Incorrect assumptions about existing data
 - Breaking changes to existing APIs
 - Missing tests for important business logic
 
+---
+
+## Final Review Structure
 After completing the review, provide:
 
-PR Review Result:
-- APPROVE
-- APPROVE WITH MINOR CHANGES
-- REQUEST CHANGES
+### PR Review Result
+- `APPROVE`
+- `APPROVE WITH MINOR CHANGES`
+- `REQUEST CHANGES`
 
-Risk:
-- LOW
-- MEDIUM
-- HIGH
-- CRITICAL
+### Risk Level
+- `LOW` / `MEDIUM` / `HIGH` / `CRITICAL`
 
-Summary:
-<brief overall assessment>
+### Summary
+`<brief overall assessment>`
 
-Must Fix Before Merge:
-<list only blocking issues>
+### Must Fix Before Merge
+`<list only blocking issues>`
 
-Non-Blocking Recommendations:
-<optional improvements>
+### Non-Blocking Recommendations
+`<optional improvements>`
 
-Required Tests:
-<specific tests that should be added or run>
+### Required Tests
+`<specific tests that should be added or run>`
 
-Do not modify any files.
-Do not commit anything.
-Do not fix the issues automatically.
-This is a review-only task.
+---
+
+> [!CAUTION]
+> - Do not modify any files.
+> - Do not commit anything.
+> - Do not fix the issues automatically.
+> - This is a review-only task.

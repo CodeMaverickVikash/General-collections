@@ -1,26 +1,35 @@
-Top 3 amazing css tools that every developer should know:
-1. Nekocalc - rem to px converter vise versa
-2. Color contrast checker - making beautiful background
-3. Css grid generator - to make layout
+# Developer Tools & Resources
 
-Undraw
-Photoroom - all photo related work like change bg
-mycolor.space and colorhunt.co - color palette
-colormind.io - to create color palettes
-Fontawesome - for icon
-bootstrap icon
-pexels.com - get img with custom size free
-freepik - for photos
-Tailblocks.org - html template
-Tailblocks.cc - html template
-Animista.net - for css animation
-postalpincodefor.com - how to know post office by pin code?
-caniuse.com - check browser support
+## 1. Top CSS Tools
+1. **[Nekocalc](https://nekocalc.com/)** – `rem` to `px` bidirectional converter.
+2. **[Color Contrast Checker](https://webaim.org/resources/contrastchecker/)** – Verify WCAG compliance for accessible backgrounds and text.
+3. **[CSS Grid Generator](https://cssgrid-generator.netlify.app/)** – Visual layout builder for CSS Grid.
 
-AI tool to automate your work
-Chatgpt
-Github copilot
-Denigma
-Tabnine
-Blackbox
-OpenAI
+---
+
+## 2. Design, Colors & Visual Assets
+- **[unDraw](https://undraw.co/)** – Open-source illustrations for landing pages and apps.
+- **[Photoroom](https://www.photoroom.com/)** – Quick background removal and photo editing.
+- **[mycolor.space](https://mycolor.space/)** & **[Color Hunt](https://colorhunt.co/)** – Curated color palettes.
+- **[Colormind](http://colormind.io/)** – AI-powered color palette generator.
+- **[Font Awesome](https://fontawesome.com/)** – Comprehensive icon library.
+- **[Bootstrap Icons](https://icons.getbootstrap.com/)** – Clean SVG icon set.
+- **[Pexels](https://www.pexels.com/)** – Free stock photos with custom sizing.
+- **[Freepik](https://www.freepik.com/)** – Graphic assets, vectors, and photos.
+- **[Tailblocks](https://tailblocks.cc/)** – Ready-to-use Tailwind CSS UI blocks.
+- **[Animista](https://animista.net/)** – On-demand CSS animation generator.
+
+---
+
+## 3. General Utilities
+- **[caniuse.com](https://caniuse.com/)** – Check browser compatibility for CSS and JS APIs.
+- **[postalpincodefor.com](https://postalpincodefor.com/)** – PIN code to post office locator.
+
+---
+
+## 4. AI Productivity Tools
+- **ChatGPT** (OpenAI)
+- **GitHub Copilot**
+- **Denigma**
+- **Tabnine**
+- **Blackbox AI**

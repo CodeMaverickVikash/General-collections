@@ -1,26 +1,33 @@
-Skills for any agent like claude code, antigravity etc
+# AI Agent Skills & MCP Servers
 
-Find skills - https://github.com/vercel-labs/skills/blob/main/skills/find-skills/SKILL.md
-Find Skills is an open-source AI agent skill developed by Vercel Labs. Its purpose is to help your AI coding agent discover, evaluate and install other skills automatically.
+Curated skills and MCP servers for AI coding agents such as Claude Code, Antigravity, and Cursor.
 
-Taste skill - https://github.com/leonxlnx/taste-skill
-Taste Skill is an open-source AI agent skill that helps coding agents create premium, professional, visually impressive websites instead of generic AI-generated UI designs.
+## Recommended Agent Skills
 
-Emilkowalski skill - for animation/motion - https://github.com/emilkowalski/skills
-Emil Kowalski Skills is a collection of open-source AI agent skills that helps coding agents build high-quality, polished UI, professional animations, and smooth user interactions.
+- **[Find Skills](https://github.com/vercel-labs/skills/blob/main/skills/find-skills/SKILL.md)**  
+  Open-source AI agent skill developed by Vercel Labs. Helps coding agents discover, evaluate, and install other skills automatically.
 
-Mobile app ui design skill - mobile ux/ui design - https://github.com/ceorkm/mobile-app-ui-design
-Mobile App UI Design is an open-source AI agent skill that helps AI coding agents design and build professional, modern mobile app interfaces using proven UX/UI principles from apps like Airbnb, Spotify, Duolingo and Revolut.
+- **[Taste Skill](https://github.com/leonxlnx/taste-skill)**  
+  Open-source AI agent skill that helps coding agents create premium, professional, visually impressive websites instead of generic AI-generated UI designs.
 
-ui-ux-pro-max-skill - https://github.com/nextlevelbuilder/ui-ux-pro-max-skill
-UI/UX Pro Max is an open-source AI agent skill by NextLevelBuilder that helps AI coding agents create professional, consistent, production-quality UI/UX designs for web, mobile and desktop applications.
+- **[Emil Kowalski Skill](https://github.com/emilkowalski/skills)**  
+  Collection of open-source AI agent skills for high-quality, polished UI, professional animations, and smooth user interactions.
 
-impeccable skill - https://github.com/pbakaus/impeccable
-Impeccable is an open-source AI design skill created by Paul Bakaus. It helps AI coding agents design, redesign, review, improve and polish frontend interfaces to achieve professional, production-quality results.
+- **[Mobile App UI Design](https://github.com/ceorkm/mobile-app-ui-design)**  
+  Open-source AI agent skill that helps AI coding agents design and build professional, modern mobile app interfaces using proven UX/UI principles from apps like Airbnb, Spotify, Duolingo, and Revolut.
 
-Stitch skill - https://github.com/google-labs-code/stitch-skills
-Stitch Skills is an open-source collection of AI agent skills by Google Labs Code, designed to connect AI coding agents with Google Stitch, an AI-powered UI design tool.
+- **[UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill)**  
+  Open-source AI agent skill by NextLevelBuilder for creating professional, consistent, production-quality UI/UX designs for web, mobile, and desktop applications.
 
-stitch mcp server + stitch skill
-playwright mcp server
-chrome devtools
+- **[Impeccable](https://github.com/pbakaus/impeccable)**  
+  Open-source AI design skill created by Paul Bakaus. Helps AI coding agents design, redesign, review, improve, and polish frontend interfaces.
+
+- **[Stitch Skills](https://github.com/google-labs-code/stitch-skills)**  
+  Open-source collection of AI agent skills by Google Labs Code, designed to connect AI coding agents with Google Stitch (AI-powered UI design tool).
+
+---
+
+## MCP Servers & Plugins
+- **Stitch MCP Server** + Stitch Skill
+- **Playwright MCP Server** (browser automation and end-to-end testing)
+- **Chrome DevTools** (browser debugging and inspection)
