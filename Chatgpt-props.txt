@@ -1,1 +1,0 @@
-Example: also, add promise to the list js - Boilerplate: also, add "concept_name" to the list "language" // to get list wise concept explanations
